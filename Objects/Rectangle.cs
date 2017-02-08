@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Rectangles.Objects
 {
-  class Rectangle
+  public class Rectangle
   {
     //Declare all private values
     private int _length;
