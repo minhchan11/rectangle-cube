@@ -16,9 +16,9 @@ namespace RectangleChecker
         List<Rectangle> allRectangles = Rectangle.GetSides();
         return View["Rectangle_all.cshtml", allRectangles];
       };
-      Post["/rectangle-result"] = _ => {
+      Get["/rectangle-result"] = _ => {
         Dictionary<string, object> Shapes = new Dictionary<string, object>();
-        Rectangle inputRectangle = new Rectangle(Request.Form["length"],Request.Form["width"]);
+        Rectangle inputRectangle = new Rectangle(Request.Query["length"],Request.Query["width"]);
         Shapes.Add("ResultingRectangle", inputRectangle);
 
         if (inputRectangle.IsSquare())
@@ -26,7 +26,6 @@ namespace RectangleChecker
           Cube inputCube = new Cube(inputRectangle);
           Shapes.Add("ResultingCube", inputCube);
         }
-        inputRectangle.SaveRectangle();
         return View["Rectangle_results.cshtml", Shapes];
       };
       Post["/rectangle_cleared"] = _ => {

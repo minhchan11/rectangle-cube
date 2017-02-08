@@ -1,4 +1,7 @@
-namespace RectangleChecker
+using System;
+using System.Collections.Generic;
+
+namespace Rectangles.Objects
 {
     public class Cube
     {

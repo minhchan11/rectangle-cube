@@ -14,7 +14,9 @@
         <p>Your second side width is: @Model["ResultingRectangle"].GetWidth()</p>
 
         @if(@Model["ResultingRectangle"].IsSquare()) {
-        <h4>Yay you have a square</h4> } else {
+        <h4>Yay you have a square</h4>
+        <p>Surface area f a Cube with those dimensions: @Model["ResultingCube"].GetSurfaceArea()</p>
+        <p>Volume of a cube with those dimensions: @Model["ResultingCube"].GetVolume()</p>} else {
         <h4>It's not a square, it's a rectangle</h4> }
         <p>Area of your rectangle is @Model["ResultingRectangle"].GetArea()</p>
         <p><a href="/">Try another one</a></p>
