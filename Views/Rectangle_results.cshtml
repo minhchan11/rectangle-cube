@@ -8,17 +8,18 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Your rectangle result</h1>
-    <p>Your first side is is: @Model.GetLength()</p>
-    <p>Your second side width is: @Model.GetWidth()</p>
+    <div class="container">
+        <h1>Your rectangle result</h1>
+        <p>Your first side is is: @Model.GetLength()</p>
+        <p>Your second side width is: @Model.GetWidth()</p>
 
-    @if(@Model.IsSquare()) {
-      <h4>Yay you have a square</h4> } else {
+        @if(@Model.IsSquare()) {
+        <h4>Yay you have a square</h4> } else {
         <h4>It's not a square, it's a rectangle</h4> }
         <p>Area of your rectangle is @Model.GetArea()</p>
         <p><a href="/">Try another one</a></p>
-  </div>
+        <button type="button" href="/rectangle_all"></button>
+    </div>
 </body>
 
 </html>

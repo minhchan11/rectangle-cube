@@ -42,6 +42,10 @@ namespace Rectangle.Objects
     {
       return _length*_width;
     }
+    public void SaveRectangle()
+    {
+      _instances.Add(this)
+    }
     //Make public boolean
     public bool IsSquare()
     {
