@@ -12,7 +12,7 @@
         <h1>All your rectangle so far</h1>
         <ul>
           @foreach (var shape in @Model) {
-            <li>First side is @shape.GetLength() and second side is @shape.GetWidth(). @if(@Model.IsSquare()){and it is a square } else { and it is a rectangle}<li>
+            <li>First side is @shape.GetLength() and second side is @shape.GetWidth(). </li>
           }
         </ul>
         <p><a href="/">Try another one</a></p>
