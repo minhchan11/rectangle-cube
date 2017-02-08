@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 
-namespace Rectangle.Objects
+namespace Rectangles.Objects
 {
   class Rectangle
   {
     //Declare all private values
     private int _length;
     private int _width;
-    private static List<Rectangle> _instances = new List<Rectangle>{}
+    private static List<Rectangle> _instances = new List<Rectangle>{};
     //Make public constructor
     public Rectangle(int Length, int Width)
     {
@@ -18,7 +18,7 @@ namespace Rectangle.Objects
     //Make public List
     public static List<Rectangle> GetSides()
     {
-      return _instances
+      return _instances;
     }
     //Make public integers
     public int GetLength()
@@ -38,13 +38,17 @@ namespace Rectangle.Objects
       _width = inputWidth;
     }
     //Make public function
-    public void GetArea()
+    public int GetArea()
     {
-      return _length*_width;
+      return _length * _width;
     }
     public void SaveRectangle()
     {
-      _instances.Add(this)
+      _instances.Add(this);
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
     //Make public boolean
     public bool IsSquare()

@@ -1,5 +1,5 @@
 using Nancy;
-using Rectangle.Objects;
+using Rectangles.Objects;
 using System.Collections.Generic;
 
 namespace RectangleChecker
@@ -14,15 +14,15 @@ namespace RectangleChecker
       Get["/rectangle_all"] = _ => {
         List<Rectangle> allRectangles = Rectangle.GetSides();
         return View["Rectangle_all.cshtml", allRectangles];
-      }
+      };
       Post["/rectangle-result"] = _ => {
         Rectangle inputRectangle = new Rectangle(Request.Form["length"],Request.Form["width"]);
         inputRectangle.SaveRectangle();
-        return Vew["Rectangle-results.cshtml",inputRectangle];
+        return View["Rectangle_results.cshtml",inputRectangle];
       };
       Post["/rectangle_cleared"] = _ => {
         Rectangle.ClearAll();
-        return View["Rectangle_cleared"];
+        return View["Rectangle_cleared.cshtml"];
       };
     }
   }
